@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  mongodb_container:
+    image: mongo:5
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=alex
+      - MONGO_INITDB_ROOT_PASSWORD=12345
+      - MONGO_INITDB_DATABASE=pathBuilderDb
+    #changed port because I already have mongo installed locally
+    command: mongod --port 27018
+    ports:
+      - 27018:27018
+    volumes:
+      - mongodb_data_container:/data/db
+volumes:
+  mongodb_data_container:

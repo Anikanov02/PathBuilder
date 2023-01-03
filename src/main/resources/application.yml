@@ -1,0 +1,25 @@
+server:
+  error:
+    include-message: always
+spring:
+  data:
+    mongodb:
+      auto-index-creation: true
+      authentication-database: admin
+      user: alex
+      password: 12345
+#      database: pathBuilderDb
+#      port: 27018
+#      host: localhost
+      uri: mongodb://alex:12345@localhost:27018/pathBuilderDb
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        data:
+#          mongodb:
+#            core:
+#              MongoTemplate: DEBUG
+path-builder:
+    run-delay-ms: 10000
+    time-interval-ms: 1000
